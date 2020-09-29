@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="Admin_Panel_MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <script src="~/js/bootstrap.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <form id="form1" runat="server">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header-inverse">
+                    <a class="navbar-brand text-primary" >Attandance</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <div class="row">
+                    <li>
+                        <asp:HyperLink ID="hlAttandance" runat="server" NavigateUrl="~/Admin Panel/Attandance/AttandanceList.aspx">Attandance</asp:HyperLink>&nbsp;&nbsp;&nbsp; </li>
+                    <li>
+                        <asp:HyperLink ID="hlStudent" runat="server" NavigateUrl="~/Admin Panel/Student/StudentList.aspx">Student</asp:HyperLink>&nbsp;&nbsp;&nbsp;&nbsp; </li>
+                    <li>
+                        <asp:HyperLink ID="hlBranchList" runat="server" NavigateUrl="~/Admin Panel/Branch/BranchList.aspx">Branch</asp:HyperLink>&nbsp;&nbsp;&nbsp; </li>
+                    <li>
+                        <asp:HyperLink ID="hlSubjectList" runat="server" NavigateUrl="~/Admin Panel/Subject/SubjectList.aspx">Subject</asp:HyperLink>&nbsp;&nbsp;&nbsp;&nbsp; </li>
+                    <li>
+                        <asp:HyperLink ID="hlFacultyList" runat="server" NavigateUrl="~/Admin Panel/Faculty/FacultyList.aspx">Faculty</asp:HyperLink>&nbsp;&nbsp;&nbsp; </li>
+                    <li>
+                        <asp:HyperLink ID="hlFacultyWiseSubject" runat="server" NavigateUrl="~/Admin Panel/FacultyWiseSubject/FacultyWiseSubjectList.aspx">Faculty_Subject</asp:HyperLink>&nbsp;&nbsp;&nbsp; </li>
+                   </div>
+                </ul>
+
+                <asp:LinkButton ID="lbLogout" runat="server" Text="Logout" CssClass="btn btn-primary pull-right" OnClick="lbLogout_Click"></asp:LinkButton>&nbsp; &nbsp;
+
+            </div>
+        </nav>
+         <h3 class="text-center">
+            <asp:Label runat="server" ID="lblUserName" /></h3>
+        &nbsp; &nbsp;
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                Prepared by : Jalpesh Nakum
+
+
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+
+
+
+
